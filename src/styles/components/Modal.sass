@@ -1,0 +1,116 @@
+@import "../styles.sass";
+
+.modal
+	position: absolute
+	color: black
+	z-index: 999
+	top: 0
+	height: 100%
+	width: 100%
+	left: 0
+	&.close
+		display: none
+	&.open
+		display: block
+
+	.closeBtn
+		position: absolute
+		top: 2%
+		right: 10%
+		color: white
+
+	.bgModal
+		background: rgba(0,0,0,.5)
+		height: 100%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+	form
+		margin: 5% auto 0
+		padding: 30px
+		background: white
+		display: flex
+		flex-direction: column
+		max-width: 370px
+		position: relative
+		z-index: 1
+		.formTitle
+			color: black
+			margin-bottom: 15px
+		label
+			display: flex
+			justify-content: space-between
+			margin-bottom: 15px
+			position: relative
+			span
+				margin: 5px 10px 0 0
+			input
+				padding: 10px
+				background: $colorLead
+				border: 1px solid silver
+				color: white
+				width: 192px
+			textarea
+				padding: 5px
+				height: 100px
+				width: 192px
+				resize: none
+				background: $colorLead
+				border: 1px solid silver
+				color: white
+			.error
+				border: 1px solid red
+
+			.errorInput
+				position: absolute
+				top: 100%
+				right: 0
+				color: red
+				font-size: 12px
+				z-index: 3
+		.successMess
+			font-size: 15px
+			font-weight: bold
+			margin-top: 10px
+			color: green
+
+		.wrapInsideLabel
+			width: 192px
+			display: flex
+			justify-content: space-between
+			input
+				width: 140px
+
+		.phoneLabel
+			a
+				background: $colorLead
+				width: 40px
+				padding-top: 10px
+				text-align: center
+				color: white
+				&:hover
+					cursor: pointer
+			&:not(:last-child)
+				.btnAddInput
+					background: #e91e63
+					color: white
+
+		.buttons
+			display: flex
+			justify-content: flex-end
+			.wrapBtns
+				width: 197px
+				display: flex
+				justify-content: space-between
+				a
+					padding: 10px 5px
+					margin-left: 5px
+					font-size: 15px
+					width: 50%
+					background: #e91e63
+					text-align: center
+					color: white
+					&:hover
+						cursor: pointer
